@@ -39,7 +39,9 @@ public class SpawnManagerX : MonoBehaviour
         if (counter >= nextWaitTime)
         {
             // Generamos una nueva bola
+            Debug.LogFormat("Hemos esperado %f segundos", nextWaitTime);
             counter = 0f;
+            nextWaitTime = Random.Range(2, 5);
         }
     }
     
