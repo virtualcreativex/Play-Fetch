@@ -19,6 +19,8 @@ public class DestroyOutOfBoundsX : MonoBehaviour
         else if (transform.position.y < bottomLimit)
         {
             Destroy(gameObject);
+            Debug.Log("Game Over");
+            Time.timeScale = 0f;  //Stops and freezes the game totally.
         }
 
     }
